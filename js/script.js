@@ -22,21 +22,21 @@ const bikes = [
         peso : 25 ,
     }
 ]
-let bikePeso = 0; 
+
 for (let i = 0; i < bikes.length; i++){
- bikePeso = bikes[i].peso; 
+let bikePeso = bikes[i].peso; 
  weight.push(bikePeso);
 
 }
-let maxWeight = weight[0];
+let minWeight = weight[0];
  for(let i = 0; i < weight.length; i++){
     let curWeight = weight[i];
-    if(curWeight < maxWeight){
-        maxWeight = curWeight;
+    if(curWeight < minWeight){
+        minWeight = curWeight;
     }
  
  }
- console.log(maxWeight);
+ console.log(minWeight);
  
  
 
