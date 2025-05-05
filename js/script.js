@@ -71,10 +71,16 @@ const teams = [
 ]
 // variabile che genera il numero random
     let random = (Math.floor(Math.random() * (max - min + 1) + min));
-    console.log(random);
+    for(let i = 0; i < teams.length; i++){
+    teams[i].puntiFatti = random;
+        teams[i].falliSubiti = random;
+        }
+        console.log(teams);
+        
     
+
     for (let i = 0; i < teams.length; i++) {
-        let curFalli = random;
+        let curFalli = teams[i].puntiFatti;
       let teamNome = teams[i].nome;
       finalValues.push({falliSubiti : curFalli, teamName : teamNome});
     }
